@@ -109,10 +109,6 @@ which(!complete.cases(NYC_Council$COMM_BOARD))
 NYC_official1 <- NYC_official[complete.cases(NYC_official$COMM_BOARD,NYC_official$COUNCIL_DIST),]
 
 
-avg_scores <- NYC_official1%>%
-  distinct(RESTAURANT_ID, .keep_all = TRUE) %>%  
-  group_by(COUNCIL_DIST) %>%
-  summarize(avg_inspection_score = mean(SCORE))
 
 
 
